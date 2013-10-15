@@ -1,0 +1,36 @@
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/**STUPID/?????? ??? ?.xlsx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/**STUPID/Renamed File.xlsx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/""STACEEYYY"??.docx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/STACEEYYY(3).docx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/"STACEEYYY"??.docx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/STACEEYYY(4).docx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/.*.plum.pants
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/.Renamed File.plum.pants
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/.plum.*.?.wang.pop
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/.plum...wang.pop
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/pant.*.guggle?.**.txt
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?/pant..guggle..txt
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890/1234567890123*56789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 copy
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890/123456789012356789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 copy
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/bumtiss!_files/102145_1011085_PP1566					_HU_.pdf
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/bumtiss!_files/102145_1011085_PP1566_HU_.pdf
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/bumtiss!_files/bumtiss!?::.htm
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/bumtiss!_files/bumtiss!--.htm
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/""STACEEYYY"??.docx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/STACEEYYY(3).docx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/"STACEEYYY"??.docx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/STACEEYYY(4).docx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/pant.*.guggle?.**.txt
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/This is a bad idea/pant..guggle..txt
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/This is a test folder /Just/What??? WHAT:\|?*      whaat.pptx
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/This is a test folder /Just/What WHAT-      whaat.pptx
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/This is a test folder /Just/****
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/This is a test folder /Just/Renamed Folder
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/**STUPID
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/STUPID
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea?
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/.This is a bad idea
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/Butterls*
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/Butterls
+Would change:	 /Users/joshsmith/Desktop/saniTestFolder/Butterls**
+Would change to: /Users/joshsmith/Desktop/saniTestFolder/Butterls(1)

@@ -30,7 +30,7 @@ fontList=[[],[],[]]
 timeStamp=sys.argv[5]
 
 #A list containing any directories which this script shouldn't touch
-ringfencedDirs=["/System/Library", "/Application"]
+ringfencedDirs=["/System/Library", "Application"]
 
 #Open log file for writing tarred fonts into, and write out header
 logPath=os.path.abspath(sys.argv[2])
@@ -42,6 +42,10 @@ logOut.write("Command: " + (" ".join(sys.argv)) + "\n\n")
 #Read archive name from user input, and append the current time to it. 
 archiveFile = os.path.abspath(sys.argv[3])
 archiveFile = archiveFile + "-" + timeStamp
+
+#If -delete flag is not set, append a 'test' marker to the .tar file
+if not (sys.argv[1] == '-d' or sys.argv[1] == '-delete'):
+	archiveFile = archiveFile + "-testRun"
 
 whiteFile = open('./whiteList.txt','r')
 
@@ -84,7 +88,7 @@ if ringfencedDirs != []:
 
 for rFence in ringfencedDirs:
 	for fPath in fontList[2]:
-		if rFence in fPath:
+		if rFence.lower() in fPath.lower():
 			
 			logAndPrint(fPath + '\n')
 
@@ -118,8 +122,8 @@ if not(set(fontList[1]).issubset(set(whiteList))):
 
 	for font in badFonts:
 	
-		logOut.write(badFontsNice[ badFonts.index(font) ])
-		logOut.write(badFontPaths[ badFonts.index(font) ] + "\n")
+		logOut.write(badFontsNice[ badFonts.index(font) ] + "\n")
+		logOut.write(badFontPaths[ badFonts.index(font) ] + "\n\n")
 
 		#Get path of font to delete
 		badFontPath = fontList[2][fontList[1].index(font)]
@@ -146,9 +150,11 @@ if not(set(fontList[1]).issubset(set(whiteList))):
 				except:
 					logAndPrint("ERROR: could not delete file:" + badFontPath)
 
+
+				
 	
 		except subprocess.CalledProcessError as e:
-			logAndPrint("ERROR: could not tar file " + badFontPath + ". tar returned with an exit code of " + str(e.returncode) + ". File has not been deleted.") 		
+			logAndPrint("ERROR: could not tar file " + badFontPath + ". tar returned with an exit code of " + str(e.returncode) + ". File has not been deleted.\n") 		
 		
 else:
 	logAndPrint("\rNo illegal fonts found on this system\n")

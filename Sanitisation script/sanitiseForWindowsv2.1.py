@@ -7,6 +7,9 @@ import os.path
 import re
 import getopt
 
+#Set up scandir - a faster way of walking the filesystem
+import scandir
+
 #Define functions:
 
 def sanitise(inString):
@@ -24,12 +27,15 @@ def sanitise(inString):
 
 def renameToClean(path, obj, objType):
 		#Takes an object (a string - either a file or a directory, as defined in 'type' which must be one of 'file' or 'dir') and, if the string has any forbidden characters, sanitises it and renames it.
+
 		
 		cleanObj = sanitise(obj)
 		cleanPath = os.path.join(path,obj) #NB - this variable will be changed if any sanitisation takes place. It's here so that it can be used when flagging up long filenames. 
 
 		if debug:
 			print "Cleanobj - - - - - -- - - - - - - - -  - - :" + cleanObj
+
+		
 
 		#If sanitise has made any difference, record the file in a list of changed files, then rename the file.
 		if cleanObj != obj:
@@ -122,12 +128,12 @@ def renameToClean(path, obj, objType):
 
 def usage():
 		print ("Usage " + sys.argv[1] + ":")
-		print ("   -d, --dorename:          Actually rename the files otherwise just log and output to standard output")
-		print ("   -h, --help:              Print this help and exit")
-		print ("   -l, --log file:          Log changes in file; otherwise don't log ")
-		print ("   -o, --oversizelog file:  Write files with overlong path names to file - otherwise don't log.")
-		print ("   -q, --quiet:             Don't output to standard out")
-		print ("   -r, --root:              Root directory otherwise use working directory")
+		print ("   -d, --dorename:	   Actually rename the files otherwise just log and output to standard output")
+		print ("   -h, --help:		   Print this help and exit")
+		print ("   -l, --log:		   Log filename; otherwise don't log ")
+		print ("   -o, --oversizelog:  Log to write files with overlong path names in - otherwise don't log.")
+		print ("   -q, --quiet:		   Don't output to standard out")
+		print ("   -r, --root:		   Root directory otherwise use working directory")
 
 try:
 		opts, args = getopt.getopt(sys.argv[1:], "o:l:r:dhqb", ["oversizelog=","log=", "root=", "dorename","help","quiet","debug"])
@@ -167,11 +173,14 @@ for o, a in opts:
 				oversizeOut = os.path.abspath(oversizeLogFileName)
 				oversizeFile = open (oversizeOut, 'w')
 
+
 #These are the characters we want to remove
 blackList = '`\/?"<>|*\n\t'
 
+
 #MAIN FUNCTION:
 #Save the first argument to a normalised logRoot variable
+
 
 for thePath, theDirs, theFiles in os.walk(theRoot, topdown=False):
 
@@ -182,3 +191,5 @@ for thePath, theDirs, theFiles in os.walk(theRoot, topdown=False):
 		#Sanitise directory names
 		for d in theDirs:
 				renameToClean(thePath, d, 'dir')
+
+
