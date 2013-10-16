@@ -15,27 +15,33 @@ def sanitise(inString):
 		outString = inString.translate(None, blackList)
 
 		#Remove all whitespace from filenames except spaces (from http://stackoverflow.com/questions/1898656/remove-whitespace-in-python-using-string-whitespace)
-		#outString = ' '.join(outString.split())
+		noWhitespaceString = ' '.join(outString.split())
+
+		#Prevent multiple runs of whitespace from being stripped
+		noMultSpaceString = ' '.join(re.split(' +', outString))
+	
+		if noMultSpaceString != noWhitespaceString:
+			
+			outString = noWhitespaceString
 
 		#Substitute hyphens for colons, to help legibility
 		outString = re.sub(':','-',outString)
 
 		return str(outString)
 
-
-#Given a file 'filename' at location 'path' with extension '.ext', this will return the path of filename(n).ext, where n is the lowest integer for which filename(n-1).ext already exitsts.
+#Given a file 'filename' at location 'path' with extension 'ext', this will return the path of filename(n)ext, where n is the lowest integer for which filename(n-1)ext already exitsts.
 def appendIndex(filename, ext, path):
-	
+
 	index = 1
 
-	appendedFile = filename + "(" + str(i) + ")." + ext
+	appendedFile = filename + "(" + str(index) + ")" + ext
 
 	appendedPath = os.path.join(path, appendedFile)
 
-	while os.path.exists(appendedPath) or appendedPath in sanitisedList
+	while os.path.exists(appendedPath) or appendedPath in sanitisedList:
 		
-		i += 1
-		appendedFile = filename + "(" + str(i) + ")." + ext
+		index += 1
+		appendedFile = filename + "(" + str(index) + ")" + ext
 		appendedPath = os.path.join(path, appendedFile)
 
 	return appendedPath
@@ -75,23 +81,8 @@ def renameToClean(path, obj, objType):
 				#If the clean path already exists, append '(n)' to the filename
 				if os.path.exists(cleanPath) or cleanPath in sanitisedList:
 
-						appendIndex(cleanSplit[0], cleanObj[len(cleanSplit[0])-1:], path)
+						cleanPath = appendIndex(cleanSplit[0], cleanObj[len(cleanSplit[0]):], path)
 		
-#						i=1
-#
-#						cleanAppended = cleanSplit[0] + "(" + str(i) + ")" + cleanObj[len(cleanSplit[0]):]
-#
-#						#Check for existing files appended with (1), (2) etc
-#					
-#						appendedPath = os.path.join(path, cleanAppended)
-#
-#						while os.path.exists(appendedPath) or appendedPath in sanitisedList:
-#								i += 1
-#								cleanAppended = cleanSplit[0] + "(" + str(i) + ")" + cleanObj[len(cleanSplit[0]):]
-#								appendedPath = os.path.join(path, cleanAppended)
-#
-#						cleanPath = os.path.join(path, cleanAppended)
-
 				if rename:
 					try:
 								os.rename(fullPath, cleanPath)
@@ -129,7 +120,7 @@ def renameToClean(path, obj, objType):
 
 def usage():
 		print ("Usage " + sys.argv[1] + ":")
-		print ("   -d, --dorename:	   Actually rename the files otherwise just log and output to standard output")
+		print ("   -d, --dorename:	   Actually rename the files - otherwise just log and output to standard output")
 		print ("   -h, --help:		   Print this help and exit")
 		print ("   -l, --log:		   Log filename; otherwise don't log ")
 		print ("   -o, --oversizelog:  Log to write files with overlong path names in - otherwise don't log.")
@@ -137,7 +128,7 @@ def usage():
 		print ("   -r, --root:		   Root directory otherwise use working directory")
 
 try:
-		opts, args = getopt.getopt(sys.argv[1:], "o:l:r:dhqb", ["oversizelog=","log=", "root=", "dorename","help","quiet"])
+		opts, args = getopt.getopt(sys.argv[1:], "o:l:r:dhqb", ["oversizelog=","log=", "root=", "dorename","help","quiet","debug"])
 except getopt.GetoptError as err:
 		# print help information and exit:
 		usage()
@@ -151,6 +142,7 @@ theRoot = "."
 logFileName = None
 oversizeLogFileName = None
 quiet = False
+debug = False
 
 for o, a in opts:
 		if o in ("-r","--root"):
@@ -170,10 +162,11 @@ for o, a in opts:
 				oversizeLogFileName = a
 				oversizeOut = os.path.abspath(oversizeLogFileName)
 				oversizeFile = open (oversizeOut, 'w')
-
+		elif o in ("--debug"):
+				debug = True
 
 #These are the characters we want to remove
-blackList = '`\/?"<>|*\n\t'
+blackList = '`\/?"<>|*'
 
 
 #MAIN FUNCTION:
