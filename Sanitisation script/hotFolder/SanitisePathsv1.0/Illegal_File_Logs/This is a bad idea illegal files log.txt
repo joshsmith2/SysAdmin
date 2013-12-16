@@ -1,0 +1,3 @@
+2013-12-10 11:05:08 : Illegal character found in file : ../To_Archive/This is a bad idea/""STACEEYYY"??.docx2013-12-10 11:05:08 : Suggested change                : ../To_Archive/This is a bad idea/STACEEYYY(3).docx
+2013-12-10 11:05:08 : Illegal character found in file : ../To_Archive/This is a bad idea/"STACEEYYY"??.docx2013-12-10 11:05:08 : Suggested change                : ../To_Archive/This is a bad idea/STACEEYYY(4).docx
+2013-12-10 11:05:08 : Illegal character found in file : ../To_Archive/This is a bad idea/pant.*.guggle?.**.txt2013-12-10 11:05:08 : Suggested change                : ../To_Archive/This is a bad idea/pant..guggle..txt

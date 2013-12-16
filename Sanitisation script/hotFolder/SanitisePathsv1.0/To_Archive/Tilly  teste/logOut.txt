@@ -1,0 +1,36 @@
+Would change:	 ./**STUPID/?????? ??? ?.xlsx
+Would change to: ./**STUPID/Renamed File.xlsx
+Would change:	 ./.This is a bad idea?/""STACEEYYY"??.docx
+Would change to: ./.This is a bad idea?/STACEEYYY(3).docx
+Would change:	 ./.This is a bad idea?/"STACEEYYY"??.docx
+Would change to: ./.This is a bad idea?/STACEEYYY(4).docx
+Would change:	 ./.This is a bad idea?/.*.plum.pants
+Would change to: ./.This is a bad idea?/.Renamed File.plum.pants
+Would change:	 ./.This is a bad idea?/.plum.*.?.wang.pop
+Would change to: ./.This is a bad idea?/.plum...wang.pop
+Would change:	 ./.This is a bad idea?/pant.*.guggle?.**.txt
+Would change to: ./.This is a bad idea?/pant..guggle..txt
+Would change:	 ./1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890/1234567890123*56789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 copy
+Would change to: ./1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890/123456789012356789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 copy
+Would change:	 ./bumtiss!_files/102145_1011085_PP1566					_HU_.pdf
+Would change to: ./bumtiss!_files/102145_1011085_PP1566_HU_.pdf
+Would change:	 ./bumtiss!_files/bumtiss!?::.htm
+Would change to: ./bumtiss!_files/bumtiss!--.htm
+Would change:	 ./This is a bad idea/""STACEEYYY"??.docx
+Would change to: ./This is a bad idea/STACEEYYY(3).docx
+Would change:	 ./This is a bad idea/"STACEEYYY"??.docx
+Would change to: ./This is a bad idea/STACEEYYY(4).docx
+Would change:	 ./This is a bad idea/pant.*.guggle?.**.txt
+Would change to: ./This is a bad idea/pant..guggle..txt
+Would change:	 ./This is a test folder /Just/What??? WHAT:\|?*      whaat.pptx
+Would change to: ./This is a test folder /Just/What WHAT-      whaat.pptx
+Would change:	 ./This is a test folder /Just/****
+Would change to: ./This is a test folder /Just/Renamed Folder
+Would change:	 ./**STUPID
+Would change to: ./STUPID
+Would change:	 ./.This is a bad idea?
+Would change to: ./.This is a bad idea
+Would change:	 ./Butterls*
+Would change to: ./Butterls
+Would change:	 ./Butterls**
+Would change to: ./Butterls(1)
